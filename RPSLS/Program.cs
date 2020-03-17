@@ -10,6 +10,12 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
+            PlayerParent test = new PlayerParent();
+            HumanPlayer test2 = new HumanPlayer();
+            test2.example();
+            test2.Choose();
+            test.YouChoose();
+
         }
     }
 }

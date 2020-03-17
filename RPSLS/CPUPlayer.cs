@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Class3
+    class CPUPlayer : PlayerParent
     {
+       
+    
+            
+    
     }
 }

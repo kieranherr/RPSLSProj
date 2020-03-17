@@ -6,7 +6,31 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Class1
+    class PlayerParent
     {
+        public List<string> moves = new List<string>();
+        string yourChoice;
+        public PlayerParent()
+        {
+            moves.Add("Rock");
+            moves.Add("Paper");
+            moves.Add("Scissors");
+            moves.Add("Lizard");
+            moves.Add("Spock");
+        }
+        public void test()
+        {
+            moves.ForEach(Console.WriteLine);
+            Console.ReadLine();
+        }
+
+        public void YouChoose()
+        {
+            Console.WriteLine("Which move would you like to perform?");
+            yourChoice = Console.ReadLine();
+            Console.WriteLine(yourChoice);
+            Console.ReadLine();
+        }
+        
     }
 }
