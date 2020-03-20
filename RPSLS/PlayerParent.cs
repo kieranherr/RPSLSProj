@@ -10,6 +10,8 @@ namespace RPSLS
     {
         public List<string> moves = new List<string>();
         string yourChoice;
+        string HumanChoice;
+        string CPUChoice;
         public PlayerParent()
         {
             moves.Add("Rock");
@@ -22,14 +24,14 @@ namespace RPSLS
         {
             moves.ForEach(Console.WriteLine);
             Console.ReadLine();
+            
         }
-
-        public void YouChoose()
+        
+        public string YouChoose()
         {
             Console.WriteLine("Which move would you like to perform?");
             yourChoice = Console.ReadLine();
-            Console.WriteLine(yourChoice);
-            Console.ReadLine();
+            return yourChoice;
         }
         
     }

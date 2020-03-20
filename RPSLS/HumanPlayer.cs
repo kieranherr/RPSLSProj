@@ -14,12 +14,13 @@ namespace RPSLS
             Console.WriteLine(moves[1]);
             Console.ReadLine();
         }
-        public void Choose()
+        public string Choose()
         {
             Console.WriteLine("Which move would you like to perform?");
             choice = Console.ReadLine();
             Console.WriteLine(choice);
             Console.ReadLine();
+            return choice;
         }
         
     }
