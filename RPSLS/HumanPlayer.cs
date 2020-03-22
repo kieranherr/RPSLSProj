@@ -16,10 +16,8 @@ namespace RPSLS
         }
         public string Choose()
         {
-            Console.WriteLine("Which move would you like to perform?");
+            Console.WriteLine("Which move would you like to perform Player Two?");
             choice = Console.ReadLine();
-            Console.WriteLine(choice);
-            Console.ReadLine();
             return choice;
         }
         

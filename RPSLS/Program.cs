@@ -15,35 +15,43 @@ namespace RPSLS
             CPUPlayer test3 = new CPUPlayer();
             string playerc;
             string player2c;
-            int HvC;
+            int player1Score = 0;
+            int player2Score = 0;
+            
             Console.WriteLine("Would you like to play against a computer (1) or another person (2)?");
-            HvC = int.Parse(Console.ReadLine());
-            if(HvC == 1)
+            int HvC = int.Parse(Console.ReadLine());
+            if (HvC == 1)
             {
-                if(test3.CPUChoice() == )
+                while (player1Score != 2 || player2Score != 2)
                 {
-                    Console.WriteLine("niashd");
+                    playerc = test.YouChoose();
+                    player2c = test3.CPUChoice();
+                    test.RunGame(playerc, player2c);
+                    player1Score = test.ReturnPlayer1Score();
+                    player2Score = test.ReturnPlayer2Score();
                 }
             }
-            playerc = test3.CPUChoice();
-            Console.WriteLine(playerc);
+            else
+            {
+                while (player1Score != 2 || player2Score != 2)
+                {
+                    playerc = test.YouChoose();
+                    player2c = test2.Choose();
+                    test.RunGame(playerc, player2c);
+                    player1Score = test.ReturnPlayer1Score();
+                    player2Score = test.ReturnPlayer2Score();
+                }
+            }
+            
+            if(player1Score == 2)
+            {
+                Console.WriteLine("Player One won the game!");
+            }
+            else if(player2Score == 2)
+            {
+                Console.WriteLine("Player Two won the game!");
+            }
             Console.ReadLine();
-            //test2.example();
-            //test2.Choose();
-            //test.YouChoose();
-
-            //string str1 = "yes";
-            //string str2 = "no";
-            //if(str1 == str2 || str1 == "Yes")
-            //{
-            //    Console.WriteLine("Logic failed");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Logic worked");
-            //}
-            //Console.ReadLine();
-
         }
     }
 }
