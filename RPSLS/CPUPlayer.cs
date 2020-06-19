@@ -9,11 +9,11 @@ namespace RPSLS
     class CPUPlayer : PlayerParent
     {
         Random rnd = new Random();
-        int num;
-        string word;
+   
         public string CPUChoice()
         {
-               num = rnd.Next(5);
+               int num = rnd.Next(5);
+            Console.WriteLine(num);
             string choice = moves[num];
             return choice;
             
