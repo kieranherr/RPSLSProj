@@ -15,14 +15,14 @@ namespace RPSLS
             CPUPlayer test3 = new CPUPlayer();
             string playerc;
             string player2c;
-            int player1Score = 0;
-            int player2Score = 0;
+            int player1Score;
+            int player2Score;
             
             Console.WriteLine("Would you like to play against a computer (1) or another person (2)?");
             int HvC = int.Parse(Console.ReadLine());
             if (HvC == 1)
             {
-                while (player1Score != 2 || player2Score != 2)
+                do
                 {
                     playerc = test.YouChoose();
                     player2c = test3.CPUChoice();
@@ -30,10 +30,11 @@ namespace RPSLS
                     player1Score = test.ReturnPlayer1Score();
                     player2Score = test.ReturnPlayer2Score();
                 }
+                while (player1Score != 2 && player2Score != 2);
             }
             else
             {
-                while (player1Score != 2 || player2Score != 2)
+                do
                 {
                     playerc = test.YouChoose();
                     player2c = test2.Choose();
@@ -41,6 +42,7 @@ namespace RPSLS
                     player1Score = test.ReturnPlayer1Score();
                     player2Score = test.ReturnPlayer2Score();
                 }
+                while (player1Score != 2 && player2Score != 2);
             }
             
             if(player1Score == 2)
